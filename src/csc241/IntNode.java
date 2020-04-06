@@ -20,14 +20,16 @@ public class IntNode {
                 // Create a new left child
                 left = new IntNode(v);
             } else {
+                // Delagate to left
                 left.insert(v);
             }
         } else {
             // belongs on the right
             if (right == null) {
-                // Create a new left child
+                // Create a new right child
                 right = new IntNode(v);
             } else {
+                // Delagate to right
                 right.insert(v);
             }
         }
@@ -44,6 +46,7 @@ public class IntNode {
                 // No left child
                 return false;
             } else {
+                // Delagate to left
                 return left.contains(v);
             }
         } else {
@@ -52,6 +55,7 @@ public class IntNode {
                 // No right child
                 return false;
             } else {
+                // Delagate to right
                 return right.contains(v);
             }
         }
