@@ -29,4 +29,20 @@ public class IntBst {
         }
     }
 
+    // remove -- remove a value
+    public void remove(int v){
+        if (root != null) {
+            root = root.remove(v);
+        }
+    }
+
+    // inOrder -- in order traversal
+    public String inOrder(){
+        if (root != null) {
+            return root.inOrder();
+        } else {
+            return "";
+        }
+    }
+
 }
